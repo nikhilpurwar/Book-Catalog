@@ -18,6 +18,10 @@ const booksRoute = require("./src/routes/book.route");
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('API is running');
+});
+
 
 // Routes
 app.use("/api/users", userRoutes);
